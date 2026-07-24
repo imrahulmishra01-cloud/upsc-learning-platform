@@ -5,21 +5,17 @@ All notable changes to the **UPSC Learning Platform** will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
----
-
 ## [Unreleased]
 
-### Planned
-- Public open-source repository release on GitHub.
-
 ---
 
-## [0.1.0] - Pre-Release Candidate
+## [0.1.0] - 2026-07-24
 
 ### Added
+- **Initial Public Pre-Release:** Self-hosted UPSC CSE study companion platform candidate for evaluation and self-hosting experiments.
 - **Private Email Allowlist Gate:**
   - Fast middleware-level session and allowlist checking (`src/lib/supabase/middleware.ts`).
-  - Server-side API route authorization guard (`requireAllowedUser()`) protecting all 23 API endpoints / 34 HTTP methods.
+  - Server-side API route authorization guard (`requireAllowedUser()`) protecting all API endpoints.
   - Fail-closed behavior returning HTTP 401 Unauthorized, 403 Forbidden, or 503 Service Unavailable when unconfigured.
 - **Study Planner & Progress Tracking:**
   - Interactive planner hub with active plan tracking, daily task filters, study goals, and backlog management.
@@ -35,7 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Article ingestion, categorization by GS Paper (GS1-GS4) and region (National, International, Reports, Explainers), and spaced revision tracking.
 - **Optional AI Answer Evaluation:**
   - Google Gemini API integration for automated answer feedback and marks breakdown.
-- **Security & Authorization Framework:**
+- **Security, Verification & Cross-Platform CI:**
   - Supabase Row Level Security (RLS) policies for all custom database tables.
-  - Automated security test suite (`npm test`) covering allowlist parsing, IDOR prevention, route coverage, and middleware routing decisions (24 tests total).
-  - Framework security upgrade to Next.js 15.5.21 (Maintenance LTS) and React 19.0.0.
+  - Automated security test suite (`npm test`) with cross-platform Node.js test discovery (`scripts/run-tests.mjs`) running 24 security unit tests.
+  - GitHub Actions CI workflow verifying test, lint, typecheck, and build on Node 20.x.
+  - Framework security baseline on Next.js 15.5.21 (Maintenance LTS) and React 19.0.0.
