@@ -1,0 +1,52 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Next.js & Build Output
+/.next/
+/out/
+/build
+*.tsbuildinfo
+
+# Local Environment & Secret Files
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# Explicitly Keep Example Environment & Seed Files
+!.env.example
+!supabase/seed.example.sql
+
+# Supabase Local State & Backups
+.supabase/
+*.dump
+*.tar
+*.gz
+*.zip
+*.bak
+
+# Testing & Coverage
+/coverage
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE & OS State
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.user
+
+# Vercel
+.vercel

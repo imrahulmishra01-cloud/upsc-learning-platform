@@ -1,0 +1,84 @@
+name: Bug Report
+description: Create a report to help us improve the UPSC Learning Platform
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please do not report security vulnerabilities here. See [SECURITY.md](../SECURITY.md) for private reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Version or Commit SHA
+      description: What version of the platform are you running? (e.g. v0.1.0 or commit hash)
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Deployment Environment
+      description: Where are you hosting the application?
+      options:
+        - Vercel
+        - Self-hosted Node.js / Docker
+        - Local Development (`npm run dev`)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      placeholder: v20.15.0 or v24.16.0
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & OS
+      placeholder: Chrome 126 on macOS / Firefox 128 on Windows
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Reproduction Steps
+      description: How can maintainers reproduce the issue?
+      placeholder: |
+        1. Go to '/materials/upload'
+        2. Select a PDF file
+        3. Click 'Upload'
+        4. See error message
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behaviour
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behaviour
+      description: What actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: sanitized-logs
+    attributes:
+      label: Relevant Sanitized Logs
+      description: Paste any error console output or server logs. Remove all secret keys, passwords, personal emails, or domain names!
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Safety & Sanitization Confirmation
+      options:
+        - label: I confirm that I have removed all passwords, tokens, API keys, and personal identifiers from the logs and report.
+          required: true
