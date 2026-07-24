@@ -3,7 +3,11 @@
 A self-hosted, private-first learning management and study tracking platform designed for Civil Services Examination (UPSC CSE) preparation.
 
 > [!IMPORTANT]
-> **Development Status:** Early open-source release candidate (v0.1.0 pre-release). This software is provided for self-hosted deployment. External adopters are responsible for operating their own infrastructure, database, storage, backups, and security configuration.
+> **Development Status:** Version 0.1.0 is the initial public pre-release. It is suitable for evaluation and self-hosting experiments, but not yet presented as production-stable. External adopters are responsible for operating their own infrastructure, database, storage, backups, and security configuration.
+
+## Releases
+
+For release notes, version history, and tags, see the repository [Releases](../../releases) section and [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
